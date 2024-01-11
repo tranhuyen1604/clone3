@@ -31,7 +31,8 @@ jobs:
   build:
     needs: test
     runs-on: ubuntu-latest
-    script-file: ${{ steps.publish.outputs.publish-file }}
+    outputs:
+      script-file: ${{ steps.publish.outputs.publish-file }}
     steps:
       - name: Get code
         uses: actions/checkout@v3
