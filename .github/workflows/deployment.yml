@@ -54,7 +54,7 @@ jobs:
             dist
             package.json
   deploy:
-    needs: test
+    needs: build
     runs-on: ubuntu-latest
     steps:
       - name: Get code
