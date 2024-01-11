@@ -65,7 +65,7 @@ jobs:
       - name: Run build
         run: npm run build
       - name: Get build artifacts
-        run: actions/download-artifact@v3
+        uses: actions/download-artifact@v3
         with:
           name: dist-file
       - name: Output contents
