@@ -1,5 +1,19 @@
-name: First workflow
-on: push
+name: Events Demo 1
+on:
+  pull_request:
+    types: opened
+    branches:
+      - main
+      - 'dev-*'
+      - 'feat/**'
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+      - 'dev-*'
+      - 'feat/**'
+    paths-ignore:
+      - '.github/workflow/*'
 jobs:
   test:
     runs-on: ubuntu-latest
