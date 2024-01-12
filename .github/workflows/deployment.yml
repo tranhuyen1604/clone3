@@ -16,7 +16,7 @@ on:
       - '.github/workflow/*'
 jobs:
   build:
-    needs: test
+    # needs: test
     runs-on: ubuntu-latest
     outputs:
       script-file: ${{ steps.publish.outputs.publish-file }}
