@@ -36,6 +36,8 @@ jobs:
         run: npm ci
       - name: Run build
         run: npm run build
+      - name: Run lint
+        run: npm run lint
       - name: Publish JS filename
         id: publish
         run: find dist/assets/*.js -type f -execdir echo 'publish-file={}' >> $GITHUB_OUTPUT ';'
